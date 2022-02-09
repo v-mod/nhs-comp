@@ -8,6 +8,18 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/about')
+def about_surgeon():
+    return render_template('about.html')
+
+# Admin Controls
+@app.route('/admin/git')
+def git():
+    return redirect('https://github.com/v-mod/nhs-comp.git')
+
+@app.route('/admin/code')
+def code():
+    return redirect('https://vscode.dev/github/v-mod/nhs-comp')
 @app.route('/admin/app/<id>')
 def admin(id):
     if id == '1798':
@@ -16,17 +28,6 @@ def admin(id):
         return 'https://postimg.cc/delete/jGyBDWSM/f1f475cc'
     else:
         return 'Access Denied'
-@app.route('/about')
-def about_surgeon():
-    return render_template('about.html')
-@app.route('/admin/git')
-def git():
-    return redirect('https://github.com/v-mod/nhs-comp.git')
-
-@app.route('/admin/code')
-def code():
-    return redirect('https://vscode.dev/github/v-mod/nhs-comp')
-
 
 
 # Run App - DO NOT TOUCH THIS LINE
