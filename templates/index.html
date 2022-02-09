@@ -19,9 +19,42 @@
             padding: 6px;
             font-size: 1.4em;
             }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow:hidden;
+                background-color: #AAABAB;
+                }
+
+            li {
+                float: left;
+                }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+            li a:hover:not(.active) {
+                background-color: white;
+                color:grey;
+                }
+
+            .active {
+                background-color: white;
+                color:grey;
+                }
         </style>
     </head>
     <body>
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/about">About the role: Surgeon</a></li>
+          </ul>
         <div id="topRightFixed"><img src='https://i.postimg.cc/Kkx0JySx/NHS.jpg' alt='NHS'/></div>
         <p>Welcome to our NHS Comp Website</p>
         <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/549813383/?autostart=true" frameborder="0" scrolling="no"></iframe>

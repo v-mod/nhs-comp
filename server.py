@@ -8,17 +8,27 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-@app.route('/admin/<id>')
+@app.route('/admin/app/<id>')
 def admin(id):
     if id == '1798':
-        return 'status of app: '+app
+        return "(host='0.0.0.0', port='443', debug=True, ssl_context=('certificate.crt','private.key')"
     elif id == 'del':
         return 'https://postimg.cc/delete/jGyBDWSM/f1f475cc'
     else:
         return 'Access Denied'
+@app.route('/about')
+def about_surgeon():
+    return render_template('about.html')
+@app.route('/admin/git')
+def git():
+    return redirect('https://github.com/v-mod/nhs-comp.git')
+
+@app.route('/admin/code')
+def code():
+    return redirect('https://vscode.dev/github/v-mod/nhs-comp')
 
 
 
 # Run App - DO NOT TOUCH THIS LINE
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port='443', debug=True, ssl_context=('certificate.crt','private.key'))
