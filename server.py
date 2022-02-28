@@ -19,7 +19,6 @@ def admin():
 @app.route('/admin/git')
 def git():
     return redirect('https://github.com/v-mod/nhs-comp.git')
-
 @app.route('/admin/code')
 def code():
     return redirect('https://vscode.dev/github/v-mod/nhs-comp')
