@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
     <head>
-        <title>Home · Nhs Competition</title>
+        <title>About the role: Surgeon · Nhs Competition</title>
         <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/P49ybXM/surgeon.png" />
         <style>
             body{
@@ -50,81 +50,66 @@
                 background-color: #0072CE;
                 color:white;
                 }
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
+            #loader {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 1;
+              width: 120px;
+              height: 120px;
+              margin: -76px 0 0 -76px;
+              border: 16px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 16px solid #3498db;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+            }
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
 
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
+            .animate-bottom {
+              position: relative;
+              -webkit-animation-name: animatebottom;
+              -webkit-animation-duration: 1s;
+              animation-name: animatebottom;
+              animation-duration: 1s
+            }
 
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
+            @-webkit-keyframes animatebottom {
+              from { bottom:-100px; opacity:0 }
+              to { bottom:0px; opacity:1 }
+            }
 
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
+            @keyframes animatebottom {
+              from{ bottom:-100px; opacity:0 }
+              to{ bottom:0; opacity:1 }
+            }
 
-#myDiv {
-  display: none;
-  text-align: center;
-}
+            #myDiv {
+              display: block;
+              text-align: center;
+            }
+
         </style>
     </head>
-    <body onload="myFunction()">
-        <div id="loader"></div>
+    <body style="height: 100%;">
+        <!--div id="loader"></div-->
 
-<div style="display:none;" id="myDiv" class="animate-bottom">
+        <div id="myDiv" class="animate-bottom" style="height: 100%;">
+                <ul>
+                    <li><a class="active" href="/">Home</a></li>
+                  </ul>
+                <div id="topRightFixed"><img src='https://i.postimg.cc/Kkx0JySx/NHS.jpg' alt='NHS'/></div>
+                <div style="height: 100%;"><iframe src="https://player.vimeo.com/video/692000440?h=6e65768b5a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" height="90%" width="100%" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
-        <ul>
-            <li><a class="active" href="/">Home</a></li>
-            <li><a href="/about">About the role: Surgeon</a></li>
-          </ul>
-        <div id="topRightFixed"><img src='https://i.postimg.cc/Kkx0JySx/NHS.jpg' alt='NHS'/></div>
-        <p>Welcome to our NHS Comp Website</p>
-        <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/631485225/?autostart=true" frameborder="0" scrolling="no"></iframe>
-</div>
-        <script>
-var myVar;
+        </div>
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
     </body>
-    </html>
