@@ -8,10 +8,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-#@app.route('/about')
-#def about_surgeon():
-#    return render_template('about.html')
-
+@app.route('/about')
+def about_surgeon():
+    return render_template('about.html')
+@app.route('/download')
+def download():
+    return redirect('/static/NHS-Competition_v1.3_Day-in-life-of-surgeon.exe')
 # Admin Controls
 @app.route('/control/admin/vivaan983')
 def admin():
